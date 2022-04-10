@@ -1,4 +1,4 @@
-package itnJava.ppj1;
+package itnJava.ppj2;
 
 public class Task4 {
     public static void main(String[] args) {

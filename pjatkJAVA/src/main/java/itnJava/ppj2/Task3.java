@@ -1,4 +1,4 @@
-package itnJava.ppj1;
+package itnJava.ppj2;
 
 import static java.lang.Math.*;
 
