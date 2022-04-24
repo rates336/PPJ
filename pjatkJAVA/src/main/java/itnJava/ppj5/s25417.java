@@ -11,8 +11,8 @@ public class s25417 {
             s = s + cyfra;
             K = K / 10;
         }
-        //s będzie zaczynając od końca pierwszą i wraz z każdym obrotem petli kolejną cyfra, a ostateczny wynik to cala
-        //liczba przeczytana od tylu czyli 123456789
+        //s będzie zaczynając od końca pierwszą i wraz z każdym obrotem petli kolejną cyfra, a
+        //ostateczny wynik to cala liczba przeczytana od tylu czyli 123456789
     }
     public void Task2() {
         int s = 0;
@@ -85,8 +85,6 @@ public class s25417 {
     public static void main(String[] args) {
         s25417 s = new s25417();
         s.Task1();
-        //s będzie zaczynając od końca pierwszą i wraz z każdym obrotem petli kolejną cyfra, a ostateczny wynik to cala
-        //liczba przeczytana od tylu czyli 123456789
         s.Task2();
         s.Task3();
         s.Task4();
