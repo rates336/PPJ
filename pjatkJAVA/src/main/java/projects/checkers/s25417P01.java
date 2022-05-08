@@ -8,268 +8,70 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.awt.image.ImageObserver;
 import java.text.AttributedCharacterIterator;
+import java.util.Scanner;
 
 public
-    class s25417P01 extends Frame {
+    class s25417P01 {
 
     public static void main(String[] args) {
-        long lower, higher;
-        s25417P01 s = new s25417P01();
-        s.Main();
-        Graphics graphics = s.theGraphics();
-    }
-    public void Main() {
-        this.addWindowListener(new WindowAdapter() {
-                                   @Override
-                                   public void windowClosing(WindowEvent e) {
-                                       System.exit(0);
-                                   }
-                               }
-        );
-        this.setSize(900, 900);
-        this.setVisible(true);
-    }
+        long l1 = 0, l2 = 0, l3 = 0, l4 = 0;
 
-    public void paint(Graphics g) {
-        paintFields(g);
-
-        g.setColor(Color.white);
-        g.fillOval(170, 70, 60,60);
-        g.setColor(Color.white);
-        g.fillOval(171, 71, 58,58);
-
-        g.setColor(Color.white);
-        g.fillOval(370, 70, 60,60);
-        g.setColor(Color.black);
-        g.fillOval(371, 71, 58,58);
-    }
-    public void paintFields(Graphics g) {
-        g.fillRect(150,50,100,100);
-        g.fillRect(350,50,100,100);
-        g.fillRect(550,50,100,100);
-        g.fillRect(750,50,100,100);
-
-        g.fillRect(50,150,100,100);
-        g.fillRect(250,150,100,100);
-        g.fillRect(450,150,100,100);
-        g.fillRect(650,150,100,100);
-
-        g.fillRect(150,250,100,100);
-        g.fillRect(350,250,100,100);
-        g.fillRect(550,250,100,100);
-        g.fillRect(750,250,100,100);
-
-        g.fillRect(50,350,100,100);
-        g.fillRect(250,350,100,100);
-        g.fillRect(450,350,100,100);
-        g.fillRect(650,350,100,100);
-
-        g.fillRect(150,450,100,100);
-        g.fillRect(350,450,100,100);
-        g.fillRect(550,450,100,100);
-        g.fillRect(750,450,100,100);
-
-        g.fillRect(50,550,100,100);
-        g.fillRect(250,550,100,100);
-        g.fillRect(450,550,100,100);
-        g.fillRect(650,550,100,100);
-
-        g.fillRect(150,650,100,100);
-        g.fillRect(350,650,100,100);
-        g.fillRect(550,650,100,100);
-        g.fillRect(750,650,100,100);
-
-        g.fillRect(50,750,100,100);
-        g.fillRect(250,750,100,100);
-        g.fillRect(450,750,100,100);
-        g.fillRect(650,750,100,100);
-    }
-    public void paintFigures(Graphics g, Color c, int a) {
-        //g.fillOval();
+        System.out.println("Ekran startowy");
+        System.out.println(8 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(8 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(7 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(7 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(6 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(6 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(5 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(5 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(4 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(4 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(3 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(3 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(2 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(2 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+        System.out.println(1 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println(1 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+        System.out.println("\tA\tB\tC\tD\tE\tF\tG\tH");
+        System.out.println("Żeby zagrać należy napisać start");
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.equals("start")) {
+            //0 = A, 0 = 1, 0 = biały, 0 = pion, 0 = zbite, l1 - l2 - białe
+            l1 = 0b001_000_001__011_000_001__101_000_001__111_000_001__000_001_001__010_001_001L;
+            l2 = 0b100_001_001__110_001_001__001_010_001__011_010_001__101_010_001__111_010_001L;
+            l3 = 0b000_101_101__010_101_101__100_101_101__110_101_101__001_110_101__011_110_101L;
+            l4 = 0b101_110_101__111_110_101__000_111_101__010_111_101__100_111_101__110_111_101L;
+            while (((l1 << 8) & 0b1__000_000_000__000_000_000__000_000_000__000_000_000__000_000_000L) ==
+                    0b1__000_000_000__000_000_000__000_000_000__000_000_000__000_000_000L ||
+                    ((l1 << 17) & 0b1__000_000_000__000_000_000__000_000_000__000_000_000L) ==
+                0b1__000_000_000__000_000_000__000_000_000__000_000_000L ||
+                    ((l1 << 26 & 0b1__000_000_000__000_000_000__000_000_000L) ==
+                0b1__000_000_000__000_000_000__000_000_000L ||
+                            ((l1 << 35) & 0b1__000_000_000__000_000_000L) ==
+                                    1__000_000_000__000_000_000L ||
+                            ((l1 << 44) & 0b1__000_000_000L) ==
+                                    0b1__000_000_000L ||
+                            ((l1 << 53) & 0b1L) == 0b1L)) {
+                System.out.println(8 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+                System.out.println(8 + "\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t");
+                System.out.println(7 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(7 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(6 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+                System.out.println(6 + "\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t");
+                System.out.println(5 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(5 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(4 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+                System.out.println(4 + "\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t");
+                System.out.println(3 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(3 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(2 + "\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t");
+                System.out.println(2 + "\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t" + " \t" + "⬛\t");
+                System.out.println(1 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println(1 + "\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t" + "⬛\t" + "⬜\t");
+                System.out.println("\tA\tB\tC\tD\tE\tF\tG\tH");
+            }
+        }
     }
 
-    public Graphics theGraphics() {
-        Graphics graphics = new Graphics() {
-            @Override
-            public Graphics create() {
-                return null;
-            }
-
-            @Override
-            public void translate(int x, int y) {
-
-            }
-
-            @Override
-            public Color getColor() {
-                return null;
-            }
-
-            @Override
-            public void setColor(Color c) {
-
-            }
-
-            @Override
-            public void setPaintMode() {
-
-            }
-
-            @Override
-            public void setXORMode(Color c1) {
-
-            }
-
-            @Override
-            public Font getFont() {
-                return null;
-            }
-
-            @Override
-            public void setFont(Font font) {
-
-            }
-
-            @Override
-            public FontMetrics getFontMetrics(Font f) {
-                return null;
-            }
-
-            @Override
-            public Rectangle getClipBounds() {
-                return null;
-            }
-
-            @Override
-            public void clipRect(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void setClip(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public Shape getClip() {
-                return null;
-            }
-
-            @Override
-            public void setClip(Shape clip) {
-
-            }
-
-            @Override
-            public void copyArea(int x, int y, int width, int height, int dx, int dy) {
-
-            }
-
-            @Override
-            public void drawLine(int x1, int y1, int x2, int y2) {
-
-            }
-
-            @Override
-            public void fillRect(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void clearRect(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
-
-            }
-
-            @Override
-            public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
-
-            }
-
-            @Override
-            public void drawOval(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void fillOval(int x, int y, int width, int height) {
-
-            }
-
-            @Override
-            public void drawArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
-
-            }
-
-            @Override
-            public void fillArc(int x, int y, int width, int height, int startAngle, int arcAngle) {
-
-            }
-
-            @Override
-            public void drawPolyline(int[] xPoints, int[] yPoints, int nPoints) {
-
-            }
-
-            @Override
-            public void drawPolygon(int[] xPoints, int[] yPoints, int nPoints) {
-
-            }
-
-            @Override
-            public void fillPolygon(int[] xPoints, int[] yPoints, int nPoints) {
-
-            }
-
-            @Override
-            public void drawString(String str, int x, int y) {
-
-            }
-
-            @Override
-            public void drawString(AttributedCharacterIterator iterator, int x, int y) {
-
-            }
-
-            @Override
-            public boolean drawImage(Image img, int x, int y, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public boolean drawImage(Image img, int x, int y, int width, int height, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public boolean drawImage(Image img, int x, int y, Color bgcolor, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public boolean drawImage(Image img, int x, int y, int width, int height, Color bgcolor, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public boolean drawImage(Image img, int dx1, int dy1, int dx2, int dy2, int sx1, int sy1, int sx2, int sy2, Color bgcolor, ImageObserver observer) {
-                return false;
-            }
-
-            @Override
-            public void dispose() {
-
-            }
-        };
-        return graphics;
-    }
 }
